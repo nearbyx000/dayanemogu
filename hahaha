@@ -1,4 +1,4 @@
-pip install git+https://github.com/openai/whisper.git
+
 import whisper
 def speech_recognition(model="base"):
     speech_model = whisper.load_model(model)
