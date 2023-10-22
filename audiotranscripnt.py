@@ -1,10 +1,15 @@
+# pip install openai-whisper
 import whisper
-def speech_recognition(model="base"):
+
+
+def speech_recognition(model='base'):
     speech_model = whisper.load_model(model)
-    result = speech_model.transcribe()
-    with open(f'transcription_{model}.txt','w' ) as file:
+    result = speech_model.transcribe('')
+
+    with open(f'transcription_{model}.txt', 'w') as file:
         file.write(result['text'])
-    pass
+
+
 def main():
     models = {1: 'tiny', 2: 'base', 3: 'small', 4: 'medium', 5: 'large'}
 
